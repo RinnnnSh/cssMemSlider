@@ -25,7 +25,6 @@ input {
 .slider {
     width: 90%;
     max-width: 60rem;
-    padding: 0;
     margin: 0 auto;
     overflow: hidden;
     display: flex;
@@ -82,18 +81,18 @@ input {
     width: 0.8rem;
     height: 0.8rem;
     border-radius: 100%;
-    border: 3px solid #545454;
+    border: 0.20rem solid #545454;
 }
 
 .bar:hover span {
     transition: all 0.3s ease-in-out;
     background-color: #bbb;
-    border: 3px solid #888;
+    border: 20rem solid #888;
 }
 
 .bar:active span {
     background-color: orangered;
-    border: 3px solid orangered;
+    border: 20rem solid orangered;
 }
 
 .text-wraper {
