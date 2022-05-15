@@ -40,7 +40,7 @@ input {
 
 .slide {
     width: 20%;
-    transition: all 1s ease-in-out;
+    transition: all 0.6s ease-in-out;
 }
 
 #slide1:checked~.slides-wraper .slides .slide-active {
@@ -77,20 +77,21 @@ input {
     transition: all 0.3s ease-in-out;
 }
 
-.bar div {
+.bar span {
+    display: block;
     width: 0.8rem;
     height: 0.8rem;
     border-radius: 100%;
     border: 3px solid #545454;
 }
 
-.bar:hover div {
+.bar:hover span {
     transition: all 0.3s ease-in-out;
     background-color: #bbb;
     border: 3px solid #888;
 }
 
-.bar:active div {
+.bar:active span {
     background-color: orangered;
     border: 3px solid orangered;
 }
@@ -103,7 +104,7 @@ input {
 .text {
     padding: 0.8rem 0;
     font-size: 1.3em;
-    transition: all 1s ease-in-out;
+    transition: all 0.6s ease-in-out;
 }
 
 #slide1:checked~.text-wraper .text-active {
@@ -126,13 +127,32 @@ input {
     margin-top: -12.4rem;
 }
 
+#slide1:checked~.navigation label[for="slide1"] span,
+#slide2:checked~.navigation label[for="slide2"] span,
+#slide3:checked~.navigation label[for="slide3"] span,
+#slide4:checked~.navigation label[for="slide4"] span,
+#slide5:checked~.navigation label[for="slide5"] span {
+    background-color: orange;
+}
+
 @media screen and (max-width: 768px) {
     .slider {
         flex-direction: column;
     }
+    .slides {
+        margin-bottom: 1.3rem;
+    }
     .navigation {
         margin: 0;
         align-self: center;
-        flex-flow: 1;
+        justify-self: center;
+        order: 2;
+    }
+    .bar {
+        width: 1rem;
+        height: 1.3rem;
+    }
+    .text-wraper {
+        order: 3;
     }
 }
