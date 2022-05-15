@@ -14,42 +14,48 @@
         <h1>CSS Cat Slider</h1>
     </header>
     <main class="slider">
-
-        <div class="slides">
-            <div class="slide active">
-                <img src="img/11.jpg" alt="">
-                <p>catcatcat ^-^</p>
-            </div>
-            <div class="slide">
-                <img src="img/12.jpg" alt="">
-                <p>catcatcat ^-^</p>
-            </div>
-            <div class="slide">
-                <img src="img/13.jpg" alt="">
-                <p>catcatcat ^-^</p>
-            </div>
-            <div class="slide">
-                <img src="img/16.jpg" alt="">
-                <p>catcatcat ^-^</p>
-            </div>
-            <div class="slide">
-                <img src="img/15.jpg" alt="">
-                <p>catcatcat ^-^</p>
-            </div>
-        </div>
-
         <input class="slider-input" checked type='radio' name='slider' id='slide1'>
         <input class="slider-input" type='radio' name='slider' id='slide2'>
         <input class="slider-input" type='radio' name='slider' id='slide3'>
         <input class="slider-input" type='radio' name='slider' id='slide4'>
         <input class="slider-input" type='radio' name='slider' id='slide5'>
 
+        <div class="slides-wraper">
+            <ul class="slides">
+                <li class="slide slide-active">
+                    <img src="img/11.jpg" alt="">
+                </li>
+                <li class="slide">
+                    <img src="img/12.jpg" alt="">
+                </li>
+                <li class="slide">
+                    <img src="img/13.jpg" alt="">
+                </li>
+                <li class="slide">
+                    <img src="img/16.jpg" alt="">
+                </li>
+                <li class="slide">
+                    <img src="img/15.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+
+        <div class="text-wraper">
+            <ul>
+                <li class="text text-active">1 catcatcat ^-^</li>
+                <li class="text">2 catcatcat ^-^</li>
+                <li class="text">3 catcatcat ^-^</li>
+                <li class="text">4 catcatcat ^-^</li>
+                <li class="text">5 catcatcat ^-^</li>
+            </ul>
+        </div>
+
         <div class="navigation">
-            <label for="slide1" class="bar"></label>
-            <label for="slide2" class="bar"></label>
-            <label for="slide3" class="bar"></label>
-            <label for="slide4" class="bar"></label>
-            <label for="slide5" class="bar"></label>
+            <label for="slide1" class="bar"><div></div></label>
+            <label for="slide2" class="bar"><div></div></label>
+            <label for="slide3" class="bar"><div></div></label>
+            <label for="slide4" class="bar"><div></div></label>
+            <label for="slide5" class="bar"><div></div></label>
         </div>
 
     </main>
