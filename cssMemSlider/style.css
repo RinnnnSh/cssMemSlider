@@ -87,12 +87,12 @@ input {
 .bar:hover span {
     transition: all 0.3s ease-in-out;
     background-color: #bbb;
-    border: 20rem solid #888;
+    border: 0.20rem solid #888;
 }
 
 .bar:active span {
     background-color: orangered;
-    border: 20rem solid orangered;
+    border: 0.20rem solid orangered;
 }
 
 .text-wraper {
