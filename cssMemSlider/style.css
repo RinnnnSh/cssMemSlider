@@ -1,0 +1,157 @@
+body {
+    font-family: 'Arial';
+    color: #545454;
+    background-color: rgb(240, 236, 236);
+}
+
+h1 {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+input {
+    display: none;
+}
+
+.slider {
+    width: 90%;
+    max-width: 60rem;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.slides {
+    display: flex;
+    width: 500%;
+    margin-bottom: 1rem;
+}
+
+.slide {
+    width: 20%;
+    transition: all 0.6s ease-in-out;
+}
+
+#slide1:checked~.slides-wraper .slides .slide-active {
+    margin-left: 0;
+}
+
+#slide2:checked~.slides-wraper .slides .slide-active {
+    margin-left: -20%;
+}
+
+#slide3:checked~.slides-wraper .slides .slide-active {
+    margin-left: -40%;
+}
+
+#slide4:checked~.slides-wraper .slides .slide-active {
+    margin-left: -60%;
+}
+
+#slide5:checked~.slides-wraper .slides .slide-active {
+    margin-left: -80%;
+}
+
+.navigation {
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.bar {
+    display: inline-block;
+    width: 1.3rem;
+    height: 1.3rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.bar span {
+    display: block;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 100%;
+    border: 0.20rem solid #545454;
+}
+
+.bar:hover span {
+    transition: all 0.3s ease-in-out;
+    background-color: #bbb;
+    border: 0.20rem solid #888;
+}
+
+.bar:active span {
+    background-color: orangered;
+    border: 0.20rem solid orangered;
+}
+
+.text-wraper {
+    height: 3rem;
+    overflow: hidden;
+}
+
+.text {
+    padding: 0.8rem 0;
+    font-size: 1.3em;
+    transition: all 0.6s ease-in-out;
+}
+
+#slide1:checked~.text-wraper .text-active {
+    margin-top: 0;
+}
+
+#slide2:checked~.text-wraper .text-active {
+    margin-top: -3.1rem;
+}
+
+#slide3:checked~.text-wraper .text-active {
+    margin-top: -6.2rem;
+}
+
+#slide4:checked~.text-wraper .text-active {
+    margin-top: -9.3rem;
+}
+
+#slide5:checked~.text-wraper .text-active {
+    margin-top: -12.4rem;
+}
+
+#slide1:checked~.navigation label[for="slide1"] span,
+#slide2:checked~.navigation label[for="slide2"] span,
+#slide3:checked~.navigation label[for="slide3"] span,
+#slide4:checked~.navigation label[for="slide4"] span,
+#slide5:checked~.navigation label[for="slide5"] span {
+    background-color: orange;
+}
+
+@media screen and (max-width: 768px) {
+    .slider {
+        flex-direction: column;
+    }
+    .slides {
+        margin-bottom: 1.3rem;
+    }
+    .navigation {
+        margin: 0;
+        align-self: center;
+        justify-self: center;
+        order: 2;
+    }
+    .bar {
+        width: 1rem;
+        height: 1.3rem;
+    }
+    .text-wraper {
+        order: 3;
+    }
+}
